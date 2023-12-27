@@ -18,16 +18,16 @@ class NotificationOfferScreen extends GetWidget<NotificationOfferController> {
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(vertical: 12.v),
                 child: Column(children: [
-                  _buildOfferItem2(
+                  _buildOfferItemRow(
                       offerTitle: "lbl_the_best_title".tr,
                       offerDescription: "msg_culpa_cillum_consectetur".tr,
                       offerTime: "msg_april_30_2014_1_01".tr),
-                  _buildOfferItem2(
+                  _buildOfferItemRow(
                       offerTitle: "msg_summer_offer_98".tr,
                       offerDescription: "msg_culpa_cillum_consectetur".tr,
                       offerTime: "msg_april_30_2014_1_01".tr),
                   SizedBox(height: 5.v),
-                  _buildOfferItem2(
+                  _buildOfferItemRow(
                       offerTitle: "msg_special_offer_25".tr,
                       offerDescription: "msg_culpa_cillum_consectetur".tr,
                       offerTime: "msg_april_30_2014_1_01".tr)
@@ -49,7 +49,7 @@ class NotificationOfferScreen extends GetWidget<NotificationOfferController> {
   }
 
   /// Common widget
-  Widget _buildOfferItem2({
+  Widget _buildOfferItemRow({
     required String offerTitle,
     required String offerDescription,
     required String offerTime,

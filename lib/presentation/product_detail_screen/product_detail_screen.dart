@@ -202,11 +202,11 @@ class ProductDetailScreen extends GetWidget<ProductDetailController> {
           Text("lbl_specification".tr, style: theme.textTheme.titleSmall),
           SizedBox(height: 12.v),
           _buildStyle(
-              styleText: "lbl_shown".tr,
-              styleCodeText: "msg_laser_blue_anth".tr),
+              dynamicText1: "lbl_shown".tr,
+              dynamicText2: "msg_laser_blue_anth".tr),
           SizedBox(height: 18.v),
           _buildStyle(
-              styleText: "lbl_style".tr, styleCodeText: "lbl_cd0113_400".tr),
+              dynamicText1: "lbl_style".tr, dynamicText2: "lbl_cd0113_400".tr),
           SizedBox(height: 19.v),
           Container(
               width: 320.h,
@@ -224,8 +224,8 @@ class ProductDetailScreen extends GetWidget<ProductDetailController> {
         padding: EdgeInsets.symmetric(horizontal: 16.h),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           _buildStyle(
-              styleText: "lbl_review_product".tr,
-              styleCodeText: "lbl_see_more".tr,
+              dynamicText1: "lbl_review_product".tr,
+              dynamicText2: "lbl_see_more".tr,
               onTapStyleCode: () {
                 onTapTxtSeeMoreLink();
               }),
@@ -324,14 +324,14 @@ class ProductDetailScreen extends GetWidget<ProductDetailController> {
 
   /// Common widget
   Widget _buildStyle({
-    required String styleText,
-    required String styleCodeText,
+    required String dynamicText1,
+    required String dynamicText2,
     Function? onTapStyleCode,
   }) {
     return Row(children: [
       Padding(
           padding: EdgeInsets.only(top: 1.v),
-          child: Text(styleText,
+          child: Text(dynamicText1,
               style: CustomTextStyles.bodySmallOnPrimary.copyWith(
                   color: theme.colorScheme.onPrimary.withOpacity(1)))),
       GestureDetector(onTap: () {
@@ -339,7 +339,7 @@ class ProductDetailScreen extends GetWidget<ProductDetailController> {
       }),
       Padding(
           padding: EdgeInsets.only(left: 234.h),
-          child: Text(styleCodeText,
+          child: Text(dynamicText2,
               style: theme.textTheme.bodySmall!
                   .copyWith(color: appTheme.blueGray300)))
     ]);

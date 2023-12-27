@@ -101,26 +101,26 @@ class CartPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _buildShippingPriceRow(
+              _buildShoppingPriceRow(
                   shippingLabel: "lbl_items_3".tr, priceLabel: "lbl_598_86".tr),
               SizedBox(height: 16.v),
-              _buildShippingPriceRow(
+              _buildShoppingPriceRow(
                   shippingLabel: "lbl_shipping".tr, priceLabel: "lbl_40_00".tr),
               SizedBox(height: 14.v),
-              _buildShippingPriceRow(
+              _buildShoppingPriceRow(
                   shippingLabel: "lbl_import_charges".tr,
                   priceLabel: "lbl_128_00".tr),
               SizedBox(height: 12.v),
               Divider(),
               SizedBox(height: 10.v),
-              _buildShippingPriceRow(
+              _buildShoppingPriceRow(
                   shippingLabel: "lbl_total_price".tr,
                   priceLabel: "lbl_766_86".tr)
             ]));
   }
 
   /// Common widget
-  Widget _buildShippingPriceRow({
+  Widget _buildShoppingPriceRow({
     required String shippingLabel,
     required String priceLabel,
   }) {
